@@ -6,8 +6,7 @@ title = "Meine Testanwendung"
 version = "1.4.2"
 debug = true
 
-release_date = 2024-01-15
-release_time = 14:30:00
+release_date = 2024-01-15T14:30:00Z
 
 # =====================================================================
 #                              SERVER
@@ -74,24 +73,21 @@ id = 1
 name = "Alice"
 email = "alice@example.com"
 roles = ["admin", "editor"]
-created_date = 2023-10-01
-created_time = 09:45:00
+created_at = 2023-10-01T09:45:00Z
 
 [[users]]
 id = 2
 name = "Bob"
 email = "bob@example.com"
 roles = ["viewer"]
-created_date = 2023-11-11
-created_time = 12:00:00
+created_at = 2023-11-11T12:00:00Z
 
 [[users]]
 id = 3
 name = "Charlie"
 email = "charlie@example.com"
 roles = ["editor", "moderator"]
-created_date = 2024-01-01
-created_time = 08:20:00
+created_at = 2024-01-01T08:20:00Z
 
 # =====================================================================
 #                        PRODUKTE (Array von Tabellen)
@@ -126,12 +122,13 @@ available = false
 pi = 3.14159
 colors = ["red", "green", "blue"]
 magic_numbers = [7, 13, 42]
-large_text = "Dies ist ein Wow!"
+large_text = """Dies ist ein
+mehrzeiliger Teststring
+in einer TOML Datei.
+"""
 
 # Datum und Zeit-Beispiele
 [dates]
 birthday = 1990-06-15
-meeting_date = 2024-03-05
-meeting_time = 09:30:00
-event_date_local_date = 2024-03-05
-event_date_local_time = 10:30:00
+meeting = 2024-03-05T09:30:00Z
+event_date_local = 2024-03-05T10:30:00+01:00
