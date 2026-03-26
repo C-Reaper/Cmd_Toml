@@ -13,13 +13,13 @@
 int main(){
     Toml yl = Toml_Make("./code/Main.toml");
     
-    //CStr value0 = Toml_GetCStr(&yl,"monitoring/uptime/history/1/details/issue");
-    //printf("Value found: '%s'\n",value0);
-    //Boolean value1 = Toml_GetBool(&yl,"api/endpoints/2/auth_required");
-    //printf("Value found: '%d'\n",value1);
-    //CStr value2 = Toml_GetCStr(&yl,"users/accounts/active/0/role");
-    //printf("Value found: '%s'\n",value2);
-    //Toml_Set(&yl,"users/accounts/active/0/role","imposter");
+    CStr value0 = Toml_GetCStr(&yl,"database/replica/hosts/0");
+    printf("Value found: '%s'\n",value0);
+
+    Boolean value1 = Toml_GetBool(&yl,"logging/rotation/enabled");
+    printf("Value found: '%d'\n",value1);
+    
+    Toml_Set(&yl,"database/replica/hosts/0","yanis@gmail.com");
 
     Toml_Print(&yl);
     Toml_Save(&yl,"./code/Save.toml");
